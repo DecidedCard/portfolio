@@ -1,12 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useLoadingStore } from "@/store/useLoadingStore";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const interval = 1000 / 60;
 
 export default function StartLoading() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isPlacedParticle, setIsPlacedParticle] = useState(false);
-  const [isFinishing, setIsFinishing] = useState(false);
+  const { isFinishing, onEndLoading } = useLoadingStore();
 
   const initCanvas = (canvas: HTMLCanvasElement) => {
     const ctx = canvas.getContext("2d")!;
@@ -21,67 +22,70 @@ export default function StartLoading() {
     ctx.scale(dpr, dpr);
   };
 
-  const canvasRender = (ctx: CanvasRenderingContext2D) => {
-    const particles: Particle[] = [];
-    let isDrawParticle = false;
-    let now, delta;
-    let then = Date.now();
+  const canvasRender = useCallback(
+    (ctx: CanvasRenderingContext2D) => {
+      const particles: Particle[] = [];
+      let isDrawParticle = false;
+      let now, delta;
+      let then = Date.now();
 
-    function createRing() {
-      const PARTICLE_NUM = 360;
-      const perCount = 4;
+      function createRing() {
+        const PARTICLE_NUM = 360;
+        const perCount = 4;
 
-      function drawNextParticle(count: number) {
-        if (count > PARTICLE_NUM - perCount) {
-          isDrawParticle = true;
-          setIsPlacedParticle(true);
+        function drawNextParticle(count: number) {
+          if (count > PARTICLE_NUM - perCount) {
+            isDrawParticle = true;
+            setIsPlacedParticle(true);
+            return;
+          }
+
+          for (let i = count; i <= count + perCount; i += 0.5) {
+            const particle = new Particle(i);
+            particles.push(particle);
+            particle.draw(ctx);
+          }
+
+          requestAnimationFrame(() => drawNextParticle(count + perCount));
+        }
+
+        requestAnimationFrame(() => drawNextParticle(0));
+      }
+
+      createRing();
+
+      const frame = () => {
+        requestAnimationFrame(frame);
+        if (isDrawParticle === false) return;
+
+        now = Date.now();
+        delta = now - then;
+
+        if (delta < interval) {
           return;
         }
 
-        for (let i = count; i <= count + perCount; i += 0.5) {
-          const particle = new Particle(i);
-          particles.push(particle);
-          particle.draw(ctx);
+        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].update();
+          particles[i].draw(ctx);
+
+          if (particles[i].opacity < 0) particles.splice(i, 1);
         }
 
-        requestAnimationFrame(() => drawNextParticle(count + perCount));
-      }
+        then = now - (delta % interval);
 
-      requestAnimationFrame(() => drawNextParticle(0));
-    }
+        if (particles.length === 0) {
+          onEndLoading();
+          return;
+        }
+      };
 
-    createRing();
-
-    const frame = () => {
       requestAnimationFrame(frame);
-      if (isDrawParticle === false) return;
-
-      now = Date.now();
-      delta = now - then;
-
-      if (delta < interval) {
-        return;
-      }
-
-      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-      for (let i = particles.length - 1; i >= 0; i--) {
-        particles[i].update();
-        particles[i].draw(ctx);
-
-        if (particles[i].opacity < 0) particles.splice(i, 1);
-      }
-
-      then = now - (delta % interval);
-
-      if (particles.length === 0) {
-        setIsFinishing(true);
-        return;
-      }
-    };
-
-    requestAnimationFrame(frame);
-  };
+    },
+    [onEndLoading]
+  );
 
   useEffect(() => {
     const ctx = canvasRef.current?.getContext("2d");
@@ -95,7 +99,7 @@ export default function StartLoading() {
     return () => {
       console.log("unmount");
     };
-  }, []);
+  }, [canvasRender]);
 
   if (isFinishing) return null;
 
