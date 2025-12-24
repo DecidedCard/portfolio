@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StartLoading from "../component/loading/StartLoading";
 
 export const metadata: Metadata = {
   title: "정해준 포트폴리오",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-kr">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <StartLoading />
+        {children}
+      </body>
     </html>
   );
 }
