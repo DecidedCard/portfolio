@@ -26,7 +26,7 @@ export default function Menu() {
       mainEl.style.filter = "blur(4px)";
     } else {
       document.body.style.overflowY = "auto";
-      //   mainEl.style.filter = "none";
+      mainEl.style.filter = "none";
     }
   }, [isOpen]);
 
@@ -44,8 +44,8 @@ export default function Menu() {
   }, []);
 
   return (
-    <div ref={navContainerRef} className=" z-30 hidden  h-10  max-md:block">
-      <div className="relative z-10 inline-block h-10 w-[30px]  text-green">
+    <div ref={navContainerRef} className="z-30 hidden h-10 max-md:block">
+      <div className="relative z-10 inline-block h-10 w-[30px] text-green">
         <button
           onClick={onToggle}
           className="absolute top-1/2 -translate-y-1/2 "
