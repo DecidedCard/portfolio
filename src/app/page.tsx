@@ -1,9 +1,9 @@
-import { SectionID } from "@/constant/sectionId";
+import { SectionID } from '@/constant/sectionId'
 
 export default function Home() {
   return (
-    <main id={SectionID.mainContent} style={{ filter: "none" }}>
+    <main id={SectionID.mainContent} style={{ filter: 'none' }}>
       test
     </main>
-  );
+  )
 }

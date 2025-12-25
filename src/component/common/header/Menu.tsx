@@ -1,54 +1,54 @@
-"use client";
-import { SectionID } from "@/constant/sectionId";
-import useOnClickOutside from "@/hook/useOnClickOutside";
-import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { IoMdClose } from "react-icons/io";
-import { RxHamburgerMenu } from "react-icons/rx";
+'use client'
+import { SectionID } from '@/constant/sectionId'
+import useOnClickOutside from '@/hook/useOnClickOutside'
+import Link from 'next/link'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { IoMdClose } from 'react-icons/io'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 export default function Menu() {
-  const navContainerRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const onToggle = () => setIsOpen((t) => !t);
+  const navContainerRef = useRef<HTMLDivElement>(null)
+  const [isOpen, setIsOpen] = useState(false)
+  const onToggle = () => setIsOpen((t) => !t)
 
   useOnClickOutside(
     navContainerRef,
     useCallback(() => {
-      setIsOpen(false);
+      setIsOpen(false)
     }, [])
-  );
+  )
 
   /* 사이드바가 오픈일 때 사이드 이펙트 */
   useEffect(() => {
-    const mainEl = document.getElementById(SectionID.mainContent)!;
+    const mainEl = document.getElementById(SectionID.mainContent)!
     if (isOpen) {
-      document.body.style.overflowY = "hidden";
-      mainEl.style.filter = "blur(4px)";
+      document.body.style.overflowY = 'hidden'
+      mainEl.style.filter = 'blur(4px)'
     } else {
-      document.body.style.overflowY = "auto";
-      mainEl.style.filter = "none";
+      document.body.style.overflowY = 'auto'
+      mainEl.style.filter = 'none'
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   /* resize event */
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth > 768) setIsOpen(false);
-    };
+      if (window.innerWidth > 768) setIsOpen(false)
+    }
 
-    window.addEventListener("resize", onResize);
+    window.addEventListener('resize', onResize)
 
     return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
+      window.removeEventListener('resize', onResize)
+    }
+  }, [])
 
   return (
     <div ref={navContainerRef} className="z-30 hidden h-10 max-md:block">
-      <div className="relative z-10 inline-block h-10 w-[30px] text-green">
+      <div className="text-green relative z-10 inline-block h-10 w-[30px]">
         <button
           onClick={onToggle}
-          className="absolute top-1/2 -translate-y-1/2 "
+          className="absolute top-1/2 -translate-y-1/2"
         >
           {isOpen ? (
             <IoMdClose size={40} className="pointer-events-none relative" />
@@ -63,7 +63,7 @@ export default function Menu() {
       <aside
         className={`${
           isOpen ? openSideBar : closeSideBar
-        } fixed right-0 top-0 z-0 hidden h-screen w-[min(400px,75vw)] items-center justify-center bg-light-navy px-10 py-16 shadow-lg shadow-navy-shadow transition-all max-md:flex`}
+        } bg-light-navy shadow-navy-shadow fixed top-0 right-0 z-0 hidden h-screen w-[min(400px,75vw)] items-center justify-center px-10 py-16 shadow-lg transition-all max-md:flex`}
       >
         <nav>
           <ol className="text-2xl">
@@ -107,8 +107,8 @@ export default function Menu() {
         </nav>
       </aside>
     </div>
-  );
+  )
 }
 
-const openSideBar = "translate-x-0";
-const closeSideBar = "translate-x-full";
+const openSideBar = 'translate-x-0'
+const closeSideBar = 'translate-x-full'

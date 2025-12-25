@@ -1,6 +1,6 @@
-import { Variants } from "framer-motion";
+import { Variants } from 'framer-motion'
 
-export const MainDelay = 0.5;
+export const MainDelay = 0.5
 
 /* Fade down */
 
@@ -19,7 +19,7 @@ export const FadeDown: Variants = {
       duration: 0.3,
     },
   },
-};
+}
 
 /* Fade up */
 
@@ -38,7 +38,7 @@ export const FadeUp: Variants = {
       duration: 0.3,
     },
   },
-};
+}
 
 /* Fade right */
 
@@ -58,7 +58,7 @@ export const FadeRight: Variants = {
       delay: 2.5,
     },
   },
-};
+}
 
 /* Fade left */
 
@@ -78,4 +78,4 @@ export const FadeLeft: Variants = {
       delay: 2.5,
     },
   },
-};
+}
