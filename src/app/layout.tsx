@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-kr">
-      <body className={`antialiased`}>
+      <body className={`bg-bg-100 antialiased`}>
         <StartLoading />
         <Header />
         {children}

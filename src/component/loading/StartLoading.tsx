@@ -31,7 +31,7 @@ export default function StartLoading() {
 
       function createRing() {
         const PARTICLE_NUM = 360
-        const perCount = 4
+        const perCount = 3
 
         function drawNextParticle(count: number) {
           if (count > PARTICLE_NUM - perCount) {
@@ -105,13 +105,13 @@ export default function StartLoading() {
 
   return (
     <section
-      className={`fixed z-50 h-screen w-screen bg-gray-300 ${
+      className={`bg-bg-100 fixed z-50 h-screen w-screen ${
         isFinishing ? 'hidden' : 'block'
       } `}
     >
       <canvas ref={canvasRef} className="h-full w-full"></canvas>
       <h1
-        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-nowrap ${
+        className={`text-text-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-nowrap ${
           isPlacedParticle ? 'scale-150' : ''
         } transition-all duration-200 ease-linear`}
       >

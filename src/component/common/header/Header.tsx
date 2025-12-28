@@ -31,25 +31,20 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-['rgba(10, 25, 47, 0.85)'] fixed z-30 w-screen backdrop-blur-lg transition-all ${
+      className={`bg-bg-300/20 fixed z-30 w-screen backdrop-blur-lg transition-all ${
         isHide ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
       <nav className="flex items-center justify-between px-10 py-4 max-md:py-4">
         <Link
           href="/"
-          className="relative block h-[60px] w-[60px] max-md:h-10 max-md:w-10"
+          className="text-text-100 relative flex h-[60px] w-[60px] items-center text-3xl font-bold max-md:h-10 max-md:w-10"
         >
-          <Image
-            fill
-            src={'/assets/main-logo.jpg'}
-            alt="로고 이미지"
-            sizes="60px, (max-width: 768px) 40px"
-          />
+          PortFolio
         </Link>
 
         <motion.ol
-          className="[&>a>li>span]:text-green flex items-center gap-6 text-base max-md:hidden [&>a>li]:flex [&>a>li]:gap-1"
+          className="[&>a>li>span]:text-text-200 text-text-100 flex items-center gap-6 text-base max-md:hidden [&>a>li]:flex [&>a>li]:gap-1"
           initial={'init'}
           animate={isFinishing ? 'on' : 'init'}
           variants={{ init: { opacity: 0 }, on: { opacity: 1 } }}
@@ -79,11 +74,7 @@ export default function Header() {
               <p>Contact</p>
             </motion.li>
           </Link>
-          {/* <li>
-						<button>Resume</button>
-					</li> */}
         </motion.ol>
-        {/* side menu */}
         <Menu />
       </nav>
     </header>
