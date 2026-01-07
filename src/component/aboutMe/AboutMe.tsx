@@ -1,8 +1,11 @@
+import Image from 'next/image'
 import styles from './AboutMe.module.css'
 
 import { SectionID } from '@/constant/sectionId'
 import SectionContainer from '../section/SectionContainer'
 import WithFadeUpTranslate from '../container/WithFadeUpTranslate'
+
+import basicImage from '../../../public/assets/basic_profile_image.jpeg'
 
 export default async function AboutMe() {
   return (
@@ -47,19 +50,17 @@ export default async function AboutMe() {
               </p>
             </div>
           </div>
-          {/* <div
+          <div
             className={`relative mx-auto aspect-square h-[300px] w-[300px] max-w-[300px] md:!w-[70%] ${styles.imgBorder}`}
           >
             <Image
-              src="/assets/basic_profile_image.jpeg"
-              fill
+              src={basicImage}
               alt="프로필 이미지"
-              sizes="300px"
-              blurDataURL={base64Img}
-              placeholder="blur"
+              width={300}
+              height={300}
               className="z-10 -translate-x-2 -translate-y-2 rounded-lg"
             />
-          </div> */}
+          </div>
         </div>
       </WithFadeUpTranslate>
     </SectionContainer>
