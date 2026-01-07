@@ -12,3 +12,15 @@
   --color-bg-200: #f5f4f1;
   --color-bg-300: #cccbc8;
 }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 60%;
+
+  @media screen and (min-width: 500px) {
+    font-size: 70%;
+  }
+  @media screen and (min-width: 900px) {
+    font-size: 100%;
+  }
+}
