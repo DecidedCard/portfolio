@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import styles from './AboutMe.module.css'
 
 import { SectionID } from '@/constant/sectionId'
 import SectionContainer from '../section/SectionContainer'
@@ -50,9 +49,7 @@ export default async function AboutMe() {
               </p>
             </div>
           </div>
-          <div
-            className={`relative mx-auto aspect-square h-[300px] w-[300px] max-w-[300px] md:!w-[70%] ${styles.imgBorder}`}
-          >
+          <div className="imgBorder relative mx-auto aspect-square h-[300px] w-[300px] max-w-[300px] md:w-[70%]">
             <Image
               src={basicImage}
               alt="프로필 이미지"
