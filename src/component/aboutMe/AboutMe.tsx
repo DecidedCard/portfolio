@@ -53,9 +53,9 @@ export default async function AboutMe() {
             <Image
               src={basicImage}
               alt="프로필 이미지"
-              width={300}
-              height={300}
-              className="z-10 -translate-x-2 -translate-y-2 rounded-lg"
+              sizes="300px"
+              placeholder="blur"
+              className="z-50 -translate-x-2 -translate-y-2 rounded-lg duration-300"
             />
           </div>
         </div>
