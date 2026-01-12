@@ -6,10 +6,12 @@ import WithFadeUpTranslate from '../../container/WithFadeUpTranslate'
 import SectionContainer from '../../section/SectionContainer'
 import SkillContent from '../SkillContent/SkillContent'
 
+import styles from './Skills.module.css'
+
 export const SkillCategoryList = [
-  { index: 0, title: 'Language', class: 'skillTabActiveter0' },
-  { index: 1, title: 'FrontEnd', class: 'skillTabActiveter1' },
-  { index: 2, title: 'ETC', class: 'skillTabActiveter2' },
+  { index: 0, title: 'Language', class: 'skillTabActive0' },
+  { index: 1, title: 'FrontEnd', class: 'skillTabActive1' },
+  { index: 2, title: 'ETC', class: 'skillTabActive2' },
 ]
 
 export default function Skills() {
@@ -19,27 +21,26 @@ export default function Skills() {
     <SectionContainer
       title="Skills"
       count="02."
-      className="mx-0 min-h-[500px] md:mx-6"
+      className="mx-0 min-h-125 md:mx-6"
       id={SectionID.skills}
     >
       <WithFadeUpTranslate>
         <div className="flex flex-col md:flex-row">
-          <div className="tabList">
+          <div className={styles.tabList}>
             {SkillCategoryList.map((obj) => (
               <button
                 key={obj.title}
-                className={`tabBtn ${
-                  obj.index === currentTitleIndex ? 'text-green' : ''
+                className={`${styles.tabBtn} ${
+                  obj.index === currentTitleIndex ? 'text-accent-100' : ''
                 }`}
                 onClick={() => setCurrentTitleIndex(obj.index)}
               >
                 {obj.title}
               </button>
             ))}
-
             <div
-              className={`skillTabActiveter ${SkillCategoryList[currentTitleIndex].class}`}
-            ></div>
+              className={`${styles.skillTabActive} ${styles[SkillCategoryList[currentTitleIndex].class]}`}
+            />
           </div>
 
           <div className="relative mt-6 ml-8 max-md:ml-0 md:mt-0">

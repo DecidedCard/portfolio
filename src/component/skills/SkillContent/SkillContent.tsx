@@ -3,6 +3,8 @@ import Image from 'next/image'
 
 import IconBackground from '@/component/icons/IconBackground/IconBackground'
 
+import styles from './SkillContent.module.css'
+
 const SkillList = [
   [
     {
@@ -243,9 +245,11 @@ export default function SkillContent({ categoryIndex }: Props) {
   return SkillCategoryList.map((cate) => (
     <div
       key={cate.index}
-      className={`content ${
-        categoryIndex === cate.index ? 'contentFadeIn' : 'contentFadeOut'
-      }`}
+      className={
+        categoryIndex === cate.index
+          ? styles.contentFadeIn
+          : styles.contentFadeOut
+      }
     >
       <h3 className="text-text-100 mb-6 text-xl leading-10 font-semibold">
         Skill Stack <span className="text-accent-100">@ {cate.title}</span>

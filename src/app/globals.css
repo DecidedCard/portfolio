@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @import '../component/aboutMe/AboutMe.css';
 @import '../component/section/SectionContainer.css';
-/* @import '../component/skills/Skills.css'; */
 /* @import '../component/skills/SkillContent/SkillContent.css'; */
 
 @theme {
@@ -15,10 +14,20 @@
   --color-bg-100: #fffefb;
   --color-bg-200: #f5f4f1;
   --color-bg-300: #cccbc8;
-
-  --spacing-tab-width: '120px';
-  --spacing-tab-height: '42px';
 }
+
+/* :root {
+  --primary-100: #d4eaf7;
+  --primary-200: #b6ccd8;
+  --primary-300: #3b3c3d;
+  --accent-100: #71c4ef;
+  --accent-200: #00668c;
+  --text-100: #1d1c1c;
+  --text-200: #313d44;
+  --bg-100: #fffefb;
+  --bg-200: #f5f4f1;
+  --bg-300: #cccbc8;
+} */
 
 html {
   scroll-behavior: smooth;

@@ -1,6 +1,3 @@
-.content {
-}
-
 .contentFadeIn {
   animation: aniFadeIn;
   animation-fill-mode: both;
@@ -30,10 +27,4 @@
     visibility: visible;
     opacity: 1;
   }
-}
-
-/* svg icon */
-
-.svg {
-  @apply h-16 w-16 max-md:h-10 max-md:w-10;
 }
