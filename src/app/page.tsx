@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main id={SectionID.mainContent} style={{ filter: 'none' }}>
       <div className="mx-auto max-w-7xl px-20 max-sm:px-10">
-        <div className="mx-auto max-w-[1000px]">
+        <div className="mx-auto max-w-250">
           <Introduce />
           <AboutMe />
           <Skills />

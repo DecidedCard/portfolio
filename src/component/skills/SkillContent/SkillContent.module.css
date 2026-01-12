@@ -13,6 +13,18 @@
   left: -9999px;
 }
 
+.svg {
+  height: 64px;
+  width: 64px;
+}
+
+@media not all and (min-width: 768px) {
+  .svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 @keyframes aniFadeIn {
   0% {
     visibility: hidden;
