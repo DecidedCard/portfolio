@@ -1,5 +1,6 @@
 import AboutMe from '@/component/aboutMe/AboutMe'
 import Introduce from '@/component/introduce/Introduce'
+import Skills from '@/component/skills/Skills/Skills'
 import { SectionID } from '@/constant/sectionId'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1000px]">
           <Introduce />
           <AboutMe />
+          <Skills />
         </div>
       </div>
     </main>

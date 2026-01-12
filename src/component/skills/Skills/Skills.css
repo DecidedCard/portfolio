@@ -1,0 +1,102 @@
+.tabList {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  overflow-x: auto;
+  width: calc(100% + 100px);
+  z-index: 3;
+  margin-left: -50px;
+  padding-left: 50px;
+}
+
+.tabBtn {
+  display: block;
+  border-bottom: 2px solid;
+  border-left: none;
+  @apply min-w-tab-width;
+  @apply px-0 py-6;
+  @apply border-accent-100;
+}
+
+.skillTabActiveter {
+  left: 0;
+  bottom: 0;
+  top: auto;
+  height: 2px;
+  position: absolute;
+  transition: 0.3s;
+  margin-left: 50px;
+  @apply bg-bg-100;
+
+  @apply w-tab-width;
+  @apply bg-bg-100;
+}
+
+.skillTabActiveter0 {
+  transform: translateX(calc(0 * theme('spacing.tab-width')));
+}
+
+.skillTabActiveter1 {
+  transform: translateX(calc(1 * theme('spacing.tab-width')));
+}
+
+.skillTabActiveter2 {
+  transform: translateX(calc(2 * theme('spacing.tab-width')));
+}
+
+.test {
+  width: 100px;
+  height: 20px;
+  background-color: red;
+  transition: 0.3s;
+}
+
+@media md {
+  .tabList {
+    display: inline-block;
+    width: auto;
+  }
+
+  .tabBtn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-left: 2px solid;
+    border-bottom: none;
+
+    @apply h-tab-height;
+    @apply px-6 py-0;
+    @apply border-accent-100;
+  }
+
+  .skillTabActiveter {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    position: absolute;
+    width: 2px;
+    transition: 0.3s;
+    @apply h-tab-height;
+    @apply bg-bg-100;
+  }
+
+  .skillTabActiveter0 {
+    transform: translateY(calc(0 * theme('spacing.tab-height')));
+  }
+
+  .skillTabActiveter1 {
+    transform: translateY(calc(1 * theme('spacing.tab-height')));
+  }
+
+  .skillTabActiveter2 {
+    transform: translateY(calc(2 * theme('spacing.tab-height')));
+  }
+
+  .test {
+    @apply bg-black;
+  }
+}
+
+.testActive {
+  width: 300px;
+}
