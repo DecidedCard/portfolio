@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@import '../component/aboutMe/AboutMe.css';
-@import '../component/section/SectionContainer.css';
 
 @theme {
   --color-primary-100: #d4eaf7;
