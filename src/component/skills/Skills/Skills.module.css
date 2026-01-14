@@ -15,6 +15,7 @@
   min-width: 120px;
   padding: 20px 0 20px 0;
   border-color: var(--color-bg-300);
+  cursor: pointer;
 }
 
 .skillTabActive {
