@@ -1,5 +1,6 @@
 import AboutMe from '@/component/aboutMe/AboutMe'
 import Introduce from '@/component/introduce/Introduce'
+import MainProjects from '@/component/project/MainProject/MainProject'
 import Skills from '@/component/skills/Skills/Skills'
 import { SectionID } from '@/constant/sectionId'
 
@@ -11,6 +12,7 @@ export default function Home() {
           <Introduce />
           <AboutMe />
           <Skills />
+          <MainProjects />
         </div>
       </div>
     </main>
