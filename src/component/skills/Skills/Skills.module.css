@@ -1,0 +1,78 @@
+.tabList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow-x: auto;
+  z-index: 3;
+  margin-left: -50px;
+  padding-left: 50px;
+}
+
+.tabBtn {
+  display: block;
+  border-left: 2px solid;
+  min-width: 120px;
+  padding: 20px 0 20px 0;
+  border-color: var(--color-bg-300);
+}
+
+.skillTabActive {
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 64px;
+  position: absolute;
+  transition: 0.3s;
+  margin-left: 50px;
+  background-color: var(--color-accent-200);
+}
+
+.skillTabActive0 {
+  transform: translateY(calc(0 * 64px));
+}
+
+.skillTabActive1 {
+  transform: translateY(calc(1 * 64px));
+}
+
+.skillTabActive2 {
+  transform: translateY(calc(2 * 64px));
+}
+
+@media not all and (min-width: 768px) {
+  .tabList {
+    width: auto;
+    flex-direction: row;
+  }
+
+  .tabBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 42px;
+    border-bottom: 2px solid;
+    border-left: none;
+    border-color: var(--color-bg-300);
+  }
+
+  .skillTabActive {
+    bottom: 0;
+    top: auto;
+    width: 30%;
+    height: 2px;
+  }
+
+  .skillTabActive0 {
+    transform: translateX(calc(0 * 100%));
+  }
+
+  .skillTabActive1 {
+    transform: translateX(calc(1 * 100%));
+  }
+
+  .skillTabActive2 {
+    transform: translateX(calc(2 * 100%));
+  }
+}

@@ -1,10 +1,14 @@
 import type { NextConfig } from 'next'
-import withPlaiceholder from '@plaiceholder/next'
 
-/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
-  turbopack: {},
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
 }
 
-export default withPlaiceholder(nextConfig)
+export default nextConfig

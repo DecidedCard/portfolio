@@ -3,6 +3,8 @@
 import { ComponentProps, PropsWithChildren } from 'react'
 import WithFadeUpTranslate from '../container/WithFadeUpTranslate'
 
+import styles from './SectionContainer.module.css'
+
 type Props = {
   title: string
   count: string
@@ -19,9 +21,9 @@ export default function SectionContainer({
   return (
     <section className={`${className ? className : ''} mb-8 py-24`} {...attr}>
       <WithFadeUpTranslate>
-        <h2 className="sectionHeader">
-          <span className="text-green text-xl">{count}</span>
-          <p className="text-3xl font-semibold">{title}</p>
+        <h2 className={styles.sectionHeader}>
+          <span className="text-accent-100 text-xl">{count}</span>
+          <p className="text-text-200 text-3xl font-semibold">{title}</p>
         </h2>
       </WithFadeUpTranslate>
       {children}

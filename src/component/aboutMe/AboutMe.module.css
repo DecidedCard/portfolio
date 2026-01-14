@@ -1,0 +1,24 @@
+.imgBorder > img:hover {
+  transform: translateX(-16px) translateY(-16px);
+}
+
+.imgBorder::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  border: solid 2px;
+  z-index: -10;
+  background-color: var(--color-bg-200);
+  border-color: var(--color-accent-200);
+  transform: translateX(8px) translateY(8px);
+  border-radius: 8px;
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.imgBorder:hover::after {
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  transform: translateX(16px) translateY(16px);
+}

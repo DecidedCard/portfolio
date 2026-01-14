@@ -6,6 +6,8 @@ import WithFadeUpTranslate from '../container/WithFadeUpTranslate'
 
 import basicImage from '../../../public/assets/basic_profile_image.jpeg'
 
+import styles from './AboutMe.module.css'
+
 export default async function AboutMe() {
   return (
     <SectionContainer title="About Me" count="01." id={SectionID.aboutMe}>
@@ -49,13 +51,15 @@ export default async function AboutMe() {
               </p>
             </div>
           </div>
-          <div className="imgBorder relative mx-auto aspect-square h-[300px] w-[300px] max-w-[300px] md:w-[70%]">
+          <div
+            className={`${styles.imgBorder} relative mx-auto aspect-square h-75 w-75 max-w-75 md:w-[70%]`}
+          >
             <Image
               src={basicImage}
               alt="프로필 이미지"
-              width={300}
-              height={300}
-              className="z-10 -translate-x-2 -translate-y-2 rounded-lg"
+              sizes="300px"
+              placeholder="blur"
+              className="z-50 -translate-x-2 -translate-y-2 rounded-lg duration-300"
             />
           </div>
         </div>

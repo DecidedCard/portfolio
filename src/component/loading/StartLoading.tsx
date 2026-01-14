@@ -31,7 +31,7 @@ export default function StartLoading() {
 
       function createRing() {
         const PARTICLE_NUM = 360
-        const perCount = 3
+        const perCount = 4
 
         function drawNextParticle(count: number) {
           if (count > PARTICLE_NUM - perCount) {
