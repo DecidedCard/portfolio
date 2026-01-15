@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import StartLoading from '../component/loading/StartLoading'
+import StartLoading from '../../component/loading/StartLoading'
 import Header from '@/component/common/header/Header'
 
 export const metadata: Metadata = {
