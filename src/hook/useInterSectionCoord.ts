@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react'
 
+// 화면에 dom이 보이는지 체크 하는 hook
 export default function useInterSectionCoord<T extends HTMLElement>() {
   const ref = useRef<T>(null)
 
   useEffect(() => {
     if (!ref.current) return
 
-    ref.current!.style.top = '50px'
-    ref.current!.style.opacity = '0'
+    ref.current.style.top = '50px'
+    ref.current.style.opacity = '0'
 
     const observe = new IntersectionObserver(
       (e) => {
@@ -18,8 +19,9 @@ export default function useInterSectionCoord<T extends HTMLElement>() {
           }
         })
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 } // 40%이상 보일 때 작동하게 설정
     )
+
     observe.observe(ref.current)
 
     return () => {

@@ -46,7 +46,7 @@ const PROJECT_DATA: Project[] = [
         />
       </Link>
     ),
-    detailSrc: '/notion/1035be869c5280f59691d6f57840658d',
+    detailSrc: 'https://www.notioniframe.com/notion/7osbtql1y4a', //iframe용 url로 변경 https://www.notioniframe.com/ 이 사이트에서 바꿀 수 있음
   },
   {
     title: 'Emmerce',
