@@ -1,4 +1,5 @@
 import AboutMe from '@/component/aboutMe/AboutMe'
+import Contact from '@/component/contract/Contract/Contract'
 import Introduce from '@/component/introduce/Introduce'
 import MainProjects from '@/component/project/MainProject/MainProject'
 import Skills from '@/component/skills/Skills/Skills'
@@ -13,6 +14,7 @@ export default function Home() {
           <AboutMe />
           <Skills />
           <MainProjects />
+          <Contact />
         </div>
       </div>
     </main>

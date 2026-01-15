@@ -10,3 +10,9 @@ export type Project = {
   ImgComponent: ReactNode
   detailSrc: string
 }
+
+export type EmailDateType = {
+  email?: string
+  title?: string
+  message?: string
+}
