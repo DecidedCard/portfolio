@@ -31,7 +31,9 @@ export default function Skills() {
               <button
                 key={obj.title}
                 className={`${styles.tabBtn} ${
-                  obj.index === currentTitleIndex ? 'text-accent-100' : ''
+                  obj.index === currentTitleIndex
+                    ? 'text-accent-100'
+                    : 'text-text-200'
                 }`}
                 onClick={() => setCurrentTitleIndex(obj.index)}
               >
@@ -43,7 +45,7 @@ export default function Skills() {
             />
           </div>
 
-          <div className="relative mt-6 ml-8 min-h-[800px] max-md:ml-0 md:mt-0">
+          <div className="relative mt-6 ml-8 min-h-200 max-md:ml-0 md:mt-0">
             <SkillContent categoryIndex={currentTitleIndex} />
           </div>
         </div>
