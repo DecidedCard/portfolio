@@ -36,10 +36,10 @@ export default function Introduce() {
         variants={FadeUp}
       >
         문제를 끝까지 파고들며,
-        <br /> 작은 개선을 반복하며 더 나은 웹 경험을 만들어갑니다.
+        <br /> 작은 개선을 반복하며 더 나은 사용자 경험을 만들어갑니다.
       </motion.h2>
       <motion.p
-        className="text-text-200 max-w-[580px] pb-8 text-xl break-keep"
+        className="text-text-200 max-w-145 pb-8 text-xl break-keep"
         variants={FadeUp}
       >
         제 웹 포트폴리오를 방문해 주셔서 진심으로 감사드립니다.
