@@ -46,7 +46,7 @@ const PROJECT_DATA: Project[] = [
         />
       </Link>
     ),
-    detailSrc: 'notion/1e5e6eb9de7a80cc8967f987b9eee87e', // 노션 공유후 notion.so/ 뒤의 코드 쓰면 됨
+    detailSrc: '/notion/1e5e6eb9de7a80cc8967f987b9eee87e', // 노션 공유후 notion.so/ 뒤의 코드 쓰면 됨
   },
   {
     title: 'Emmerce',
