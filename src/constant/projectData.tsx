@@ -5,34 +5,31 @@ import Link from 'next/link'
 
 const PROJECT_DATA: Project[] = [
   {
-    title: '하얼남',
-    date: '2024.06 ~ 2024.07',
+    title: 'On’s',
+    date: '2025.03 ~ 2025.08',
     serviceMaintain: '',
-    description: `자신의 하루를 어떻게 사용했는지 시각화하여 볼 수 있게 해주는 타이머 서비스입니다. 
-		Nextjs로 만든 프로젝트이며, PWA를 활용해 앱을 사용하는 듯한 사용자 경험을 제공해줍니다. 
-		Nextjs로 만든 프로젝트이며, ec2서버를 사용해서 배포했습니다.
+    description: `무인 매장을 운영하는 점주를 위한 통합 관리 대시보드 서비스입니다.
+매출·재고·발주 데이터를 하나의 화면에서 확인할 수 있도록 설계했으며,
+React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현했습니다.
+상태 관리 구조를 직접 설계하며 실사용자를 고려한 대시보드 UX 개선에 집중했습니다.
     `,
     skillList: [
       'React',
-      'NextJS v14',
-      'PWA',
-      'TailwindCSS',
-      'React-Query v4',
+      'NextJS (App Router)',
+      'TypeScript',
+      'React Query',
       'Zustand',
-      'Nginx',
-      'Docker',
-      'Github',
-      'Express',
-      'Prisma',
-      'Typescript',
+      'TailwindCSS',
+      'Recharts',
+      'Vercel',
     ],
     linkList: (
       <>
-        <Link href={'https://github.com/SeungYn/haalnam'} target="_blank">
+        <Link
+          href={'https://github.com/DecidedCard/On-s-FE.git'}
+          target="_blank"
+        >
           <GitHubIcon size={20} />
-        </Link>
-        <Link href={'https://haalnam.site'} target="_blank">
-          <ShareIcon size={20} />
         </Link>
       </>
     ),
