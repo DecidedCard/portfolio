@@ -38,9 +38,15 @@ export default function Header() {
       <nav className="flex items-center justify-between px-10 py-4 max-md:py-4">
         <Link
           href="/"
-          className="text-text-100 relative flex h-[60px] w-[60px] items-center text-3xl font-bold max-md:h-10 max-md:w-10"
+          className="text-text-100 relative flex h-15 w-15 items-center text-3xl font-bold max-md:h-10 max-md:w-10"
         >
           PortFolio
+          {/* <Image
+            src={'/assets/main-logo.png'}
+            alt="로고 이미지"
+            width={60}
+            height={60}
+          /> */}
         </Link>
 
         <motion.ol
