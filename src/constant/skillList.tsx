@@ -124,8 +124,8 @@ const SkillList = [
         </IconBackground>
       ),
       title: 'Zustand',
-      description: `• 최근 프로젝트에 전역 상태 관리를 위해 사용한 경험이 있습니다.
-				• localStorage와 연동, reducer형태로 적용한 경험이 있습니다.
+      description: `• 전역 상태 관리를 위해 Zustand를 사용한 경험이 있습니다.
+• 컴포넌트 간 상태 공유와 상태 흐름을 단순하게 유지하는 데 활용했습니다.
 				`,
     },
     {
