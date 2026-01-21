@@ -35,7 +35,7 @@ export default function WithFadeUpTranslate({
   return (
     <div
       ref={containerRef}
-      className={`relative transition-all duration-700 ${!isIntersection ? 'translate-y-20 opacity-0' : '-translate-y-0 opacity-100'}`}
+      className={`relative transition-all duration-700 ${!isIntersection ? 'translate-y-20 opacity-0' : 'translate-y-0 opacity-100'}`}
       style={{
         transitionDelay: `0.${delay}s`,
       }}
