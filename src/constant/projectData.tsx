@@ -64,15 +64,13 @@ Axios interceptor를 활용한 토큰 갱신 구조와
       'Token Auth',
       'REST API',
     ],
-    linkList: <>{/* 내부 서비스라 링크 없음 */}</>,
+    linkList: <>{/* 링크 없음 */}</>,
     ImgComponent: (
-      <div className="relative">
-        <Image
-          src="/assets/project-images/creditguard-main.png"
-          fill
-          alt="Credit Guard"
-        />
-      </div>
+      <Image
+        src="/assets/project-images/CreditGuard.png"
+        fill
+        alt="Credit Guard"
+      />
     ),
     detailSrc: '/notion/credit-guard-project',
   },
