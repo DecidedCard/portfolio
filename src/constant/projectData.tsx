@@ -41,6 +41,42 @@ React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현
     detailSrc: '/notion/1e5e6eb9de7a80cc8967f987b9eee87e', // TODO 추후 노션 작성 후 수정
   },
   {
+    title: 'Credit Guard',
+    date: '2024.08 (1개월 MVP)',
+    serviceMaintain: '',
+    description: `
+실버링 인턴십 기간 동안 프론트엔드를 단독으로 담당한
+부동산 계약 및 월세 납부 기반 신용 관리 서비스 MVP입니다.
+
+임차인의 월세 납부 이력을 기반으로 신용 점수를 시각화하고,
+계약서 관리, 월세 납부 현황, 신용도 분석 기능을 제공하는 모바일 중심 서비스입니다.
+
+Next.js(App Router) 기반으로 전체 화면을 구현했으며,
+Axios interceptor를 활용한 토큰 갱신 구조와
+로그인·SMS 인증·신용 점수 조회·계약 관리 등 핵심 플로우를 직접 개발했습니다.
+  `,
+    skillList: [
+      'NextJS (App Router)',
+      'React',
+      'TypeScript',
+      'Axios',
+      'TailwindCSS',
+      'Token Auth',
+      'REST API',
+    ],
+    linkList: <>{/* 내부 서비스라 링크 없음 */}</>,
+    ImgComponent: (
+      <div className="relative">
+        <Image
+          src="/assets/project-images/creditguard-main.png"
+          fill
+          alt="Credit Guard"
+        />
+      </div>
+    ),
+    detailSrc: '/notion/credit-guard-project',
+  },
+  {
     title: 'Porifo',
     date: '2024.03 ~ 2024.05',
     serviceMaintain: '',
