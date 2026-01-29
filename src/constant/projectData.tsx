@@ -36,7 +36,17 @@ React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현
 
     // TODO 이미지 선택 후 수정
     ImgComponent: (
-      <Image src="/assets/project-images/haalnam-main.png" fill alt="이미지" />
+      <Link
+        href={'https://www.porifo.com/'}
+        target="_blank"
+        className="relative"
+      >
+        <Image
+          src="/assets/project-images/haalnam-main.png"
+          fill
+          alt="이미지"
+        />
+      </Link>
     ),
     detailSrc: '/notion/1e5e6eb9de7a80cc8967f987b9eee87e', // TODO 추후 노션 작성 후 수정
   },
@@ -66,11 +76,17 @@ Axios interceptor를 활용한 토큰 갱신 구조와
     ],
     linkList: <>{/* 링크 없음 */}</>,
     ImgComponent: (
-      <Image
-        src="/assets/project-images/CreditGuard.png"
-        fill
-        alt="Credit Guard"
-      />
+      <Link
+        href={'https://www.porifo.com/'}
+        target="_blank"
+        className="relative"
+      >
+        <Image
+          src="/assets/project-images/CreditGuard.png"
+          fill
+          alt="Credit Guard"
+        />
+      </Link>
     ),
     detailSrc: '/notion/credit-guard-project',
   },
