@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { FadeDown, MainDelay } from '@/constant/framer-motion'
@@ -38,19 +37,13 @@ export default function Header() {
       <nav className="flex items-center justify-between px-10 py-4 max-md:py-4">
         <Link
           href="/"
-          className="text-text-100 relative flex h-15 w-15 items-center text-3xl font-bold max-md:h-10 max-md:w-10"
+          className="text-primary-300 relative flex h-15 w-15 items-center text-3xl font-bold max-md:h-10 max-md:w-10"
         >
           PortFolio
-          {/* <Image
-            src={'/assets/main-logo.png'}
-            alt="로고 이미지"
-            width={60}
-            height={60}
-          /> */}
         </Link>
 
         <motion.ol
-          className="[&>a>li>span]:text-text-200 text-text-100 flex items-center gap-6 text-base max-md:hidden [&>a>li]:flex [&>a>li]:gap-1"
+          className="[&>a>li>span]:text-accent-100 text-text-100 flex items-center gap-6 text-base max-md:hidden [&>a>li]:flex [&>a>li]:gap-1"
           initial={'init'}
           animate={isFinishing ? 'on' : 'init'}
           variants={{ init: { opacity: 0 }, on: { opacity: 1 } }}
