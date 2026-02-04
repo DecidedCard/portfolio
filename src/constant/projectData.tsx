@@ -125,7 +125,7 @@ Axios interceptor를 활용한 토큰 갱신 구조와
         className="relative"
       >
         <Image
-          src="/assets/project-images/emmerce-main.png" // TODO 추후 이미지 선택 후 수정
+          src="/assets/project-images/Porifo.png" // TODO 추후 이미지 선택 후 수정
           fill
           alt="이미지"
         />
