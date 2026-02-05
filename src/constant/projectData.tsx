@@ -37,11 +37,7 @@ React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현
     // TODO 이미지 선택 후 수정
     ImgComponent: (
       <div className="relative">
-        <Image
-          src="/assets/project-images/haalnam-main.png"
-          fill
-          alt="이미지"
-        />
+        <Image src="/assets/project-images/Ons.png" fill alt="이미지" />
       </div>
     ),
     detailSrc: '/notion/1e5e6eb9de7a80cc8967f987b9eee87e', // TODO 추후 노션 작성 후 수정
