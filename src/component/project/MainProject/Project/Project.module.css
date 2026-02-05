@@ -150,7 +150,7 @@
     margin: 0 0;
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-    color: var(--color-accent-100);
+    color: var(--color-accent-200);
   }
 
   .projectDescription {
@@ -165,7 +165,7 @@
       --tw-leading,
       var(--text-lg--line-height) /* calc(1.75 / 1.125) ≈ 1.555556 */
     );
-    color: var(--color-accent-100);
+    color: var(--color-text-200);
     border-radius: 8px;
 
     &:hover,
@@ -195,7 +195,7 @@
     li {
       margin: 0 20px 5px 0;
       white-space: nowrap;
-      color: var(--color-accent-100);
+      color: var(--color-accent-200);
       font-size: var(--text-base) /* 1rem = 16px */;
       line-height: var(
         --tw-leading,
@@ -209,7 +209,7 @@
     align-items: center;
     margin-top: 10px;
     margin-left: -10px;
-    color: var(--color-accent-100);
+    color: var(--color-accent-200);
 
     a {
       padding: 10px;

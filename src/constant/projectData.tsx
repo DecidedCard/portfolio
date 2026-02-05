@@ -34,7 +34,6 @@ React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현
       </>
     ),
 
-    // TODO 이미지 선택 후 수정
     ImgComponent: (
       <div className="relative">
         <Image src="/assets/project-images/Ons.png" fill alt="이미지" />
@@ -112,11 +111,7 @@ Axios interceptor를 활용한 토큰 갱신 구조와
         target="_blank"
         className="relative"
       >
-        <Image
-          src="/assets/project-images/Porifo.png" // TODO 추후 이미지 선택 후 수정
-          fill
-          alt="이미지"
-        />
+        <Image src="/assets/project-images/Porifo.png" fill alt="이미지" />
       </Link>
     ),
     detailSrc: '/notion/c82099c04f4540f0817285a224841055', // TODO 노션 작성 후 수정
