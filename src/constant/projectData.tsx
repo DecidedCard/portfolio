@@ -46,15 +46,12 @@ React Query 기반 데이터 패칭과 Recharts를 활용한 시각화를 구현
     date: '2024.08 (1개월 MVP)',
     serviceMaintain: '',
     description: `
-실버링 인턴십 기간 동안 프론트엔드를 단독으로 담당한
-부동산 계약 및 월세 납부 기반 신용 관리 서비스 MVP입니다.
-
-임차인의 월세 납부 이력을 기반으로 신용 점수를 시각화하고,
+실버링 인턴십 기간 동안 프론트엔드를 담당한
+부동산 계약 및 월세 납부 서비스 MVP입니다.
 계약서 관리, 월세 납부 현황, 신용도 분석 기능을 제공하는 모바일 중심 서비스입니다.
-
 Next.js(App Router) 기반으로 전체 화면을 구현했으며,
 Axios interceptor를 활용한 토큰 갱신 구조와
-로그인·SMS 인증·신용 점수 조회·계약 관리 등 핵심 플로우를 직접 개발했습니다.
+로그인·SMS 인증·계약 관리 등 핵심 플로우를 직접 개발했습니다.
   `,
     skillList: [
       'NextJS (App Router)',
@@ -62,8 +59,6 @@ Axios interceptor를 활용한 토큰 갱신 구조와
       'TypeScript',
       'Axios',
       'TailwindCSS',
-      'Token Auth',
-      'REST API',
     ],
     linkList: <>{/* 링크 없음 */}</>,
     ImgComponent: (
@@ -81,10 +76,9 @@ Axios interceptor를 활용한 토큰 갱신 구조와
     title: 'Porifo',
     date: '2024.03 ~ 2024.05',
     serviceMaintain: '',
-    description: `개발자와 취업 준비생을 위한 포트폴리오·이력서 생성 서비스입니다.
+    description: `포트폴리오·이력서 생성 서비스입니다.
 입력한 정보를 기반으로 미리보기와 실제 결과물을 분리하여 제공했으며,
 폼 상태 관리와 UI 컴포넌트 재사용성에 집중해 개발했습니다.
-디자이너와 협업하며 Figma 기반 UI를 구현한 경험이 있습니다.
     `,
     skillList: [
       'React',
